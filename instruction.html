@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Screenshot 2023-10-27 200555.png">
+    <title>Game-2048</title>
+    <link rel="stylesheet" href="homepage.css">
+    <style>
+        body{
+          background-color: #25252b;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height:100vh;
+        }
+        #table{
+            width: 30vw;
+            height:70vh;
+            box-shadow: 0 0 15px 15px rgba(0, 221, 255, 0.329);
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction:column;
+        }
+        #s9{
+            /* position: absolute; */
+            /* width: 300px;
+            height: 50px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            background-color: #25252bdf;
+            gap: 20px;
+            margin-top: 15px;
+            /* margin-top: 10px; */
+            margin-bottom: 20px;
+        }
+        .arrow{
+            background-color:#25252bdf ;
+            position: relative;
+            width: 50px;
+            height: 50px; 
+            border-radius: 50%;
+            transform: 0.4s ease;
+            /* border: 2px solid  rgb(0, 221, 255); */
+            box-shadow: 0px 0px 3px 3px rgba(0, 221, 255, 0.622);
+        }
+
+        .arrow div{
+            position: absolute;
+            border-top:4px solid  rgba(0, 221, 255,0.836);
+            border-left:4px solid rgba(0, 221, 255, 0.836) ;
+            transform: rotate(45deg);
+            height: 21px;
+            width: 21px;
+            left:14px;
+            top:17px;
+        }
+        #left{
+            transform: rotate(270deg);
+        }
+        #down{
+            transform: rotate(180deg);
+        }
+        #right{
+            transform: rotate(90deg);
+        }
+        .content{
+            font-size: 25px;
+            color: rgba(255, 255, 255, 0.834);
+            padding: 25px;
+        }
+        @media screen and (max-width:420px){
+            #table{
+                border-radius: 15px;
+                width:290px;
+                height: 70vh;
+                box-shadow: 0 0 5px 5px rgba(0, 221, 255, 0.329);
+            }
+            .arrow{
+                width: 35px;
+                height:35px;
+                box-shadow: 0px 0px 2.5px 2.5px rgba(0, 221, 255, 0.622);
+            }
+            .arrow div{
+                border-top:3px solid  rgba(0, 221, 255,0.836);
+                border-left:3px solid rgba(0, 221, 255, 0.836) ;
+                height: 13px;
+                width: 13px;
+                left:10.5px;
+                top:11.5px;
+            }
+            .content{
+                font-size: 20px;
+                padding: 20px;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="table">
+        <div id="s9">
+            <div class="arrow" id="up" onclick="up()"><div></div></div>
+            <div class="arrow" id="left" onclick="left()"><div></div></div>
+            <div class="arrow"  id="right" onclick="right()"><div></div></div>
+            <div class="arrow"  id="down" onclick="down()"><div></div></div>
+        </div>
+        <div class="content">Swipe to move the tiles in above direction(left,right,up,down) using given keys or keybord arrows.</div>
+        <div class="content">When two tiles with the same number join, they merge into one</div>
+        <div class="content">Join the tiles and get to the 2048 one.!</div>
+        <a href="g2048.html" style="--clr:#6eff3e" target="_parent"><span>PLAY</span><i></i></a>
+    </div>
+</body>
+</html>

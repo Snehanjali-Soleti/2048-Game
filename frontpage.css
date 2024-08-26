@@ -1,0 +1,110 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#s0{
+    opacity: 1;
+    position: absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height:100vh;
+    background-color: #25252b;
+}
+#box{
+    position: relative;
+    width: 400px;
+    height: 400px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 20px; 
+    flex-wrap: wrap;
+}
+#innerbox{
+    position: absolute;
+    width: 390px;
+    height: 390px; 
+    background-color:#25252b ;
+    border-radius: 18px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: rgb(200, 170, 170);
+    letter-spacing: 10px;
+    text-shadow: 0 0 10px rgb(158, 44, 44),0 0 50px rgb(155, 68, 68),0 0 70px rgb(181, 97, 97);
+}
+#innerbox :before{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #25252b;
+    cursor: pointer;
+}
+#box::before{
+    content:'';
+    position: absolute;
+    width: 600px;
+    height: 600px; 
+    background: repeating-conic-gradient(#ff2770 0%,#ff2770 5%,transparent 5%,transparent 40%,#ff2770 50%);
+    /* background: repeating-conic-gradient(maroon 0%,maroon 5%,transparent 5%,transparent 40%,maroon 50%); */
+    animation: animate 7s linear infinite;
+    border-radius: 18px;
+}
+#box::after{
+    content:'';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    /* background: linear-gradient(rgb(145, 7, 7),rgb(0, 0, 255)); */
+    background: repeating-conic-gradient(#272bff 22%,#272bff 27%,transparent 27%,transparent 62%,#272bff 72%);
+    /* background: repeating-conic-gradient(#0f118b 22%,#0f118b 27%,transparent 27%,transparent 62%,#0f118b 72%); */
+    animation: animate 7s linear infinite;
+    border-radius: 20px;
+}
+/* #box::after{
+    content:'2024';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+     color: rgb(135, 191, 222);letter-spacing: 10px;
+    text-shadow: 0 0 10px rgb(41, 149, 159),0 0 50px rgb(0, 255, 221),0 0 70px rgb(0, 128, 98);
+    position: absolute;
+    inset:5px;
+    border-radius: 15px;
+    background-color: #25252b ;
+} */
+@keyframes animate{
+    from{
+        transform: rotate(0deg)
+    }
+    to{
+        transform: rotate(360deg)
+    }
+}
+/* @keyframes rotate{
+    from{
+        transform: rotate(0deg)
+    }
+    to{
+        transform: rotate(360deg)
+    }
+} */
+@media screen and (max-width:420px){
+    #box{
+        width:250px;
+        height:350px;
+        border-radius: 10px;
+    }
+    #innerbox{
+        width:245px;
+        height: 345px;
+        border-radius: 9.5px;
+        font-size: 40px;
+    }
+}

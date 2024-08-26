@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game-2048</title>
+    <link rel="stylesheet" href="gameover.css">
+    <link rel="stylesheet" href="g2048.css">
+    <link rel="stylesheet" href="homepage.css">
+    <script src="g2048.js"></script>
+    <link rel="icon" type="image/x-icon" href="Screenshot 2023-10-27 200555.png">
+</head>
+<body >
+    <div id="s1">
+        <h1 id="title" class="text">2048</h1>
+        <div id="line"></div>
+        <h2 class="text" id="scr" >SCORE:<span id="score" >0</span></h2>
+        <div id="board">  </div>
+        <div id="container">
+            <div id="s9">
+                <div class="arrow arr" id="up" onclick="up()"><div></div></div>
+                <div class="arrow arr" id="left" onclick="left()"><div></div></div>
+                <div class="arrow arr"  id="right" onclick="right()"><div></div></div>
+                <div class="arrow arr"  id="down" onclick="down()"><div></div></div>
+            </div>
+            <div id="exit" style="--clr: rgb(0, 221, 255)" onclick="exit()"><div>&#10006</div></div>
+            <!-- <a href="exit.html" id="exit" style="--clr: rgb(0, 221, 255);text-decoration: none;"><span>&#10006</span></a> -->
+        </div> 
+    </div>
+    <div id="s2">
+        <p id="ulost" style="--clr:#6eff3e"><span>YOU  LOST</span></p>
+        <div style="--clr:#6eff3e" id="count"><span>SCORE <span id="sc">0</span></span></div>
+        <a href="#" style="--clr:violet"><span>SHARE</span><i></i></a>
+        <div id="ibox">
+        <a href="g2048.html" style="--clr:#1e9bff ;" onclick="retry();" target="_parent"><span>RETRY</span><i></i></a>
+        <a href="exit.html" style="--clr:#ff1867" target="_parent"><span>QUIT</span><i></i></a>
+        </div>
+    </div> 
+</body>
+</html>

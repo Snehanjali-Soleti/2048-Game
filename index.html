@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game-2k48</title>
+    <link rel="stylesheet" href="frontpage.css">
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="icon" type="image/x-icon" href="Screenshot 2023-10-27 200555.png">
+    <style>
+        #container{
+            position: relative;
+        }
+    </style>
+    <script>
+        setTimeout(time,3000);
+        function time(){
+            document.getElementById('s0').style.display='none';
+            document.getElementById('s4').style.opacity=1;
+        }
+    </script>
+</head>
+<body>
+    <!-- <div id="container"> -->
+        <div id="s4">
+            <a href="instruction.html" style="--clr:#1e9bff"><span>INSTRUCTIONS</span><i></i></a>
+            <a href="g2048.html" style="--clr:#6eff3e" target="_parent"><span>PLAY</span><i></i></a>
+            <a href="exit.html" style="--clr:#ff1867" target="_parent"><span>EXIT</span><i></i></a>
+        </div>
+        <div id="s0">
+            <div id="box">
+            </div>
+            <div id="innerbox"> 2048
+            </div>
+        </div>
+</body>
+</html>
